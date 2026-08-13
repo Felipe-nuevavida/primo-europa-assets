@@ -1,6 +1,6 @@
 /*
- * Primo Europa — Módulo central del comparador v29
- * Microdecisiones: Te conviene si / Necesitas / Ojo
+ * Primo Europa — Módulo central del comparador v30
+ * Microdecisiones: Te conviene si / Necesitas / Ojo + UX móvil
  * Fuente: datos verificados del comparador y edición de conversión 2026-08-13.
  */
 (function () {
@@ -43,6 +43,12 @@
       .primo-watch h4::before { content:'!'; color:#c1432a; }
       .primo-decision-card p { margin:0; font-size:13px; line-height:1.42; color:#536174; }
       .tarifa-link.primo-detail-trigger-open { color:#c1432a !important; font-weight:700; }
+      @media (max-width:880px) {
+        .card-action { display:grid !important; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:'price price' 'cta details'; gap:10px 12px; padding:16px 18px !important; align-items:center !important; justify-content:stretch !important; }
+        .card-action .price { grid-area:price; font-size:32px; }
+        .card-action .btn { grid-area:cta; width:100% !important; min-width:0; margin:0 !important; padding:13px 10px !important; font-size:14px; white-space:nowrap; }
+        .card-action .tarifa-link { grid-area:details; margin:0 !important; padding:13px 4px; font-size:12px; line-height:1.15; white-space:nowrap; text-align:center; }
+      }
       @media (max-width:700px) { .primo-detail-box { padding:16px; } .primo-decision-grid { grid-template-columns:1fr; gap:9px; } }
     `;
     document.head.appendChild(style);
@@ -119,6 +125,10 @@
       trigger.setAttribute('aria-expanded', 'true');
       activePanel = panel;
       activeTrigger = trigger;
+      window.setTimeout(function() {
+        const y = panel.getBoundingClientRect().top + window.scrollY - 16;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      }, 70);
     });
   }
 
@@ -135,7 +145,7 @@
       window.addEventListener('resize', function() { if (activePanel) activePanel.style.maxHeight = activePanel.scrollHeight + 'px'; });
       outsideListenerAttached = true;
     }
-    console.log(LOG, 'v29 listo:', { route:route, cards:cards.length });
+    console.log(LOG, 'v30 listo:', { route:route, cards:cards.length });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once:true }); else init();
