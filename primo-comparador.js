@@ -1,6 +1,6 @@
 /*
- * Primo Europa — Módulo central del comparador v30
- * Microdecisiones: Te conviene si / Necesitas / Ojo + UX móvil
+ * Primo Europa — Módulo central del comparador v31
+ * Microdecisiones + UX móvil + llegada directa al comparador
  * Fuente: datos verificados del comparador y edición de conversión 2026-08-13.
  */
 (function () {
@@ -14,6 +14,7 @@
   let activePanel = null;
   let activeTrigger = null;
   let outsideListenerAttached = false;
+  let navigationBound = false;
 
   function normalize(value) {
     return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -58,6 +59,60 @@
     let path = window.location.pathname || '/';
     if (!path.endsWith('/')) path += '/';
     return ROUTES[path] || null;
+  }
+
+  function withComparatorHash(href) {
+    if (!href || href === '#') return href;
+    try {
+      const url = new URL(href, window.location.origin);
+      if (url.origin !== window.location.origin) return href;
+      url.hash = 'primo-comparador';
+      return url.href;
+    } catch (error) {
+      return href;
+    }
+  }
+
+  function initComparatorNavigation() {
+    if (navigationBound) return;
+    navigationBound = true;
+
+    // Categoría directa: añade el ancla justo antes de que el navegador navegue al post.
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a.primo-accordion-link');
+      if (!link) return;
+      const href = link.getAttribute('href');
+      if (href && href !== '#') link.href = withComparatorHash(link.href);
+    }, true);
+
+    // Categoría elegida después del toast de país: actualiza la ruta pendiente antes del listener global.
+    document.addEventListener('click', function(event) {
+      const button = event.target.closest('#primo-country-toast .primo-toast-country');
+      const toast = document.getElementById('primo-country-toast');
+      const pending = toast && toast.__pendingLink;
+      if (!button || !pending) return;
+      toast.__pendingLink = Object.assign({}, pending, {
+        urlEspana: withComparatorHash(pending.urlEspana),
+        urlAlemania: withComparatorHash(pending.urlAlemania)
+      });
+    }, true);
+
+    // Al aterrizar en un post desde una categoría, muestra de inmediato la cabecera azul y las ofertas.
+    if (window.location.hash === '#primo-comparador') {
+      let attempts = 0;
+      const focusComparator = function() {
+        const target = document.querySelector('.primo-custom-layout .top') || document.querySelector('.primo-custom-layout');
+        if (target) {
+          const header = document.querySelector('.gh-head, header');
+          const offset = header ? header.getBoundingClientRect().height : 0;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+          return;
+        }
+        if (attempts++ < 25) window.setTimeout(focusComparator, 100);
+      };
+      window.setTimeout(focusComparator, 80);
+    }
   }
 
   function findRecord(route, brand) {
@@ -125,15 +180,12 @@
       trigger.setAttribute('aria-expanded', 'true');
       activePanel = panel;
       activeTrigger = trigger;
-      window.setTimeout(function() {
-        const y = panel.getBoundingClientRect().top + window.scrollY - 16;
-        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
-      }, 70);
     });
   }
 
   function init() {
     injectStyles();
+    initComparatorNavigation();
     const route = routeForCurrentPage();
     if (!route) return;
     const cards = Array.from(document.querySelectorAll('.card'));
@@ -145,7 +197,7 @@
       window.addEventListener('resize', function() { if (activePanel) activePanel.style.maxHeight = activePanel.scrollHeight + 'px'; });
       outsideListenerAttached = true;
     }
-    console.log(LOG, 'v30 listo:', { route:route, cards:cards.length });
+    console.log(LOG, 'v31 listo:', { route:route, cards:cards.length });
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once:true }); else init();
