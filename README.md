@@ -16,3 +16,6 @@ Cuando se aprueben programas de afiliación, se actualizarán las URLs correspon
 ## Auditoría de carga visual — 14 de agosto de 2026
 
 La web principal carga `primo-opcionA.css` desde jsDelivr con un commit fijo del repositorio `primo-europa-assets`. Esto confirma que el diseño de la página principal se puede actualizar mediante un nuevo archivo CSS y un cambio explícito de la URL de carga, sin modificar el contenido, los comparadores ni el JavaScript de Ghost. La estrategia segura es mantener `primo-opcionA.css` sin cambios, crear una variante visual nueva y probarla con un commit inmutable antes de reemplazar la referencia activa.
+
+
+La variante `primo-opcionB-editorial.css` se publicó únicamente en la rama `editorial-refresh-preview` y se aplicó de forma temporal en una sesión aislada del navegador mediante una URL con commit fijo de jsDelivr. No se modificó la referencia de producción que continúa cargando `primo-opcionA.css`. La vista previa conserva la estructura y funcionalidad actual de Ghost mientras actualiza el sistema cromático, botones, tarjetas, estados de selección y contraste.
