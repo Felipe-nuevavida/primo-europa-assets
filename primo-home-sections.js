@@ -91,7 +91,7 @@
 
     return (
       '<div class="psv-inner">' +
-        '<p class="psv-intro">Elige tu destino y resuelve lo que bloquea tu primer mes.</p>' +
+        '<p class="psv-intro">Elige tu destino y resuelve lo que bloquea tu primer mes</p>' +
         '<div class="psv-block psv-es">' +
           '<h3 class="psv-blocktitle">🇪🇸 España · 3 trámites que desbloquean tu llegada</h3>' +
           '<div class="psv-grid">' + esHtml + '</div>' +
