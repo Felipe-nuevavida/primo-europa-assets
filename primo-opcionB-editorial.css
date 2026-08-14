@@ -1,0 +1,106 @@
+/* ============================================================
+   PRIMO EUROPA — Opción B: Editorial de llegada
+   Variante visual independiente. No sustituye primo-opcionA.css.
+   Inspirada en la landing “Tu primer mes en Alemania, en orden”.
+   ============================================================ */
+
+:root{
+  --pe-ink:#0B172A;
+  --pe-ink-soft:#152B49;
+  --pe-paper:#F7F4EE;
+  --pe-paper-bright:#FFFDF8;
+  --pe-line:#D9D3C8;
+  --pe-coral:#EF6B50;
+  --pe-coral-deep:#C94D35;
+  --pe-sun:#F4C56B;
+  --pe-mint:#B8DDD0;
+  --pe-muted:#607080;
+}
+
+/* Base: menos ruido visual, contraste cálido y tipografía editorial. */
+.gh-head::after,header.gh-head::after,header.site-header::after{background:var(--pe-paper) !important}
+.gh-head,.site-header{background:rgba(247,244,238,.94) !important;backdrop-filter:blur(12px) !important}
+.gh-head a,.site-header a{color:var(--pe-ink) !important}
+.gh-head-button,.gh-head-members .gh-button{background:var(--pe-coral) !important;border-color:var(--pe-coral) !important;color:#fff !important;border-radius:4px !important;box-shadow:0 8px 18px rgba(239,107,80,.18) !important}
+.gh-head-button:hover,.gh-head-members .gh-button:hover{background:var(--pe-coral-deep) !important;transform:translateY(-1px) !important}
+
+/* Hero: azul noche con el coral como acento de decisión. */
+#primo-hero{background:linear-gradient(135deg,#081426 0%,#0B172A 48%,#17335A 100%) !important}
+#primo-hero::after{background:radial-gradient(42% 62% at 8% 10%,rgba(239,107,80,.25) 0%,rgba(239,107,80,0) 72%),radial-gradient(48% 67% at 92% 96%,rgba(244,197,107,.16) 0%,rgba(244,197,107,0) 70%) !important}
+#primo-hero h1,.primo-mission-block h3,.primo-value-item h3,.primo-guides-subtitle,#primo-testimonials .primo-test-title,.ptr-title,.psv-blocktitle{font-family:'Fraunces',Georgia,serif !important;letter-spacing:-.035em !important}
+#primo-hero h1{font-weight:650 !important;line-height:1.04 !important}
+#primo-hero h1 em{color:var(--pe-coral) !important}
+#primo-hero p.primo-sub{color:#D9E1EA !important}
+.primo-trust-badge{border-left-color:rgba(184,221,208,.68) !important}
+.ptb-number{background:linear-gradient(135deg,var(--pe-coral),var(--pe-sun)) !important;-webkit-background-clip:text !important;background-clip:text !important;-webkit-text-fill-color:transparent !important}
+.ptb-text span{color:#C4D0DC !important}
+.ptb-text .ptb-highlight{color:#fff !important}
+
+/* Interfaz: fondo crema, tarjetas blancas y estados visibles. */
+#primo-main-interface,#primo-impact,#primo-value,#primo-back-bar,#primo-testimonials,#primo-trust-route{background:var(--pe-paper) !important}
+.primo-mi-timeline::before{background:repeating-linear-gradient(180deg,var(--pe-line) 0 7px,transparent 7px 14px) !important}
+.primo-mi-number{background:var(--pe-ink) !important;color:var(--pe-sun) !important;font-family:'Fraunces',Georgia,serif !important;box-shadow:0 7px 15px rgba(11,23,42,.15) !important}
+.primo-mi-label,.primo-mission-block h3,.primo-country-card .primo-country-card-text,.primo-impact-text,.primo-accordion-title,.primo-accordion-link-label,.primo-guide-title,.primo-test-name{color:var(--pe-ink) !important}
+.primo-mi-hint,.primo-mission-block p,.primo-accordion-sub,.primo-guide-excerpt,.primo-test-quote,.primo-value-item p{color:var(--pe-muted) !important}
+.primo-country-card,.primo-impact-inner,.primo-guide-card,.primo-test-card,.primo-accordion-link{border-color:var(--pe-line) !important;background:var(--pe-paper-bright) !important}
+.primo-country-card{border-radius:10px !important;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease !important}
+.primo-country-card:hover{border-color:rgba(239,107,80,.58) !important;transform:translateY(-3px) !important;box-shadow:0 16px 34px rgba(11,23,42,.10) !important}
+.primo-country-card.primo-active{border-color:var(--pe-coral) !important;background:#FFF2EC !important;box-shadow:0 13px 28px rgba(239,107,80,.16) !important}
+
+/* Acordeones: jerarquía tranquila y señal de acción coral. */
+.primo-accordion-icon,.primo-accordion-link-icon{background:var(--pe-paper) !important}
+.primo-accordion-item:hover .primo-accordion-icon,.primo-accordion-item.primo-open .primo-accordion-icon{background:#FFE4DB !important;box-shadow:0 0 0 2px rgba(239,107,80,.18) inset !important}
+.primo-accordion-chevron{color:var(--pe-muted) !important}
+.primo-accordion-item.primo-open .primo-accordion-chevron{color:var(--pe-coral) !important}
+.primo-accordion-link:hover{border-color:var(--pe-coral) !important;box-shadow:0 10px 24px rgba(11,23,42,.08) !important}
+.primo-accordion-link:hover .primo-accordion-link-icon{background:#FFE4DB !important}
+
+/* Bloques de valor y contenido: usa coral para la acción y menta para la confianza. */
+.primo-impact-icon{background:#E0F1EB !important;color:#1D8068 !important}
+.primo-impact-text b{color:var(--pe-coral) !important}
+.primo-value-icon-circle{background:linear-gradient(135deg,var(--pe-coral),#F58C72) !important;box-shadow:0 8px 18px rgba(239,107,80,.22) !important}
+.primo-guide-card{border-radius:12px !important;transition:transform .2s ease,box-shadow .2s ease !important}
+.primo-guide-card:hover{border-color:var(--pe-coral) !important;transform:translateY(-3px) !important;box-shadow:0 16px 30px rgba(11,23,42,.10) !important}
+.primo-guide-link{color:var(--pe-coral-deep) !important}
+.primo-guide-link:hover{color:var(--pe-ink) !important}
+
+/* Lead magnet y legal: misma identidad que la landing. */
+#primo-leadmagnet,#primo-legalbar,#primo-country-toast{background:var(--pe-ink) !important}
+.primo-lm-title{font-family:'Fraunces',Georgia,serif !important;letter-spacing:-.03em !important}
+.primo-lm-form input{background:#fff !important;border-radius:4px !important}
+.primo-lm-form button{background:var(--pe-coral) !important;border-radius:4px !important;box-shadow:0 8px 18px rgba(239,107,80,.20) !important}
+.primo-lm-form button:hover{background:var(--pe-coral-deep) !important}
+#primo-country-toast button.primo-toast-country:hover{background:var(--pe-coral) !important}
+
+/* Cards y rutas añadidas a la home: consistencia con la nueva landing. */
+.ptr-eyebrow,.psv-intro{color:var(--pe-ink) !important}
+.ptr-pill{background:var(--pe-paper-bright) !important;border-color:var(--pe-line) !important;box-shadow:0 8px 20px rgba(11,23,42,.06) !important}
+.ptr-count{color:var(--pe-ink) !important}
+.ptr-pilltext,.ptr-text,.psv-text{color:var(--pe-muted) !important}
+.ptr-grid::before{border-top-color:rgba(239,107,80,.35) !important}
+.ptr-card{background:var(--pe-paper-bright) !important;border-color:var(--pe-line) !important;border-radius:14px !important}
+.ptr-card::after{background:var(--pe-coral) !important}
+.ptr-card:hover{box-shadow:0 18px 36px rgba(11,23,42,.12) !important}
+.ptr-num{color:#E9E4DA !important}
+.ptr-icon{background:linear-gradient(135deg,var(--pe-coral),#F38A70) !important}
+.psv-step{background:#FFF5F0 !important;border-color:#F1D9D0 !important}
+.psv-de .psv-step{background:#EEF7F4 !important;border-color:#CFE4DD !important}
+.psv-tag{background:#FFE1D7 !important;color:var(--pe-coral-deep) !important}
+.psv-de .psv-tag{background:#DDF0EA !important;color:#1D8068 !important}
+.psv-es .psv-cta{color:var(--pe-coral-deep) !important}
+.psv-de .psv-cta{color:#1D8068 !important}
+
+/* Panel de detalle y carga. */
+.primo-detail-inner{border-top-color:var(--sello,var(--pe-coral)) !important}
+.primo-detail-close{color:var(--pe-ink) !important}
+.primo-detail-close:hover{background:var(--pe-coral) !important;color:white !important}
+.primo-detail-col li::before{color:#BEA46D !important}
+#primo-loading-overlay{background:var(--pe-paper) !important}
+.primo-spinner{border-color:rgba(239,107,80,.16) !important;border-top-color:var(--pe-coral) !important}
+.primo-loading-text{color:var(--pe-ink) !important}
+
+@media (max-width:760px){
+  .gh-head,.site-header{background:var(--pe-paper) !important}
+  .primo-country-card:hover{transform:none !important}
+  .ptr-card:hover,.primo-guide-card:hover{transform:none !important}
+}
