@@ -1,70 +1,71 @@
+/* Ruta Mediterránea — prioridad sobre el Script Global de Ghost */
 /* PRIMO EUROPA - Parche visual Opcion A: Ruta Mediterranea */
-.gh-head::after,header.gh-head::after,header.site-header::after{background-color:#FBF3E7}
-.primo-trust-badge{border-left-color:#E7D9C2}
-.ptb-number{background:linear-gradient(135deg,#C1603D,#B8912F);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.ptb-text span{color:#7A6E58}
-.ptb-text .ptb-highlight{color:#1B2A41}
-#primo-hero{background:radial-gradient(120% 160% at 15% 0%,#142440 0%,#0E1B30 60%,#0B1B2E 100%)}
-#primo-hero::after{background:radial-gradient(38% 55% at 20% 15%,rgba(193,96,61,.24) 0%,rgba(193,96,61,0) 70%),radial-gradient(45% 60% at 85% 90%,rgba(184,145,47,.16) 0%,rgba(184,145,47,0) 70%)}
-#primo-hero h1{font-family:'Fraunces',serif;font-weight:700}
-#primo-hero h1 em{color:#C1603D;font-style:italic}
-#primo-main-interface{background:#FBF3E7}
-.primo-mi-timeline::before{background:repeating-linear-gradient(180deg,#E7D9C2 0 8px,transparent 8px 16px)}
-.primo-mi-number{background:#1B2A41;font-family:'Fraunces',serif}
-.primo-mi-label{color:#1B2A41}
-.primo-mi-hint{border-color:#E7D9C2;color:#7A6E58}
-.primo-mission-block h3{font-family:'Fraunces',serif;color:#1B2A41}
-.primo-mission-block p{color:#7A6E58}
-.primo-country-card{border-color:#E7D9C2}
-.primo-country-card .primo-country-card-text{color:#1B2A41;font-family:'Fraunces',serif}
-.primo-country-card:hover{border-color:#E3B48C}
-.primo-country-card.primo-active{border-color:#C1603D;background:rgba(193,96,61,.07);box-shadow:0 10px 26px rgba(193,96,61,.16)}
-#primo-impact{background:#FBF3E7}
-.primo-impact-inner{border-color:#E7D9C2}
-.primo-impact-icon{background:rgba(193,96,61,.12);color:#C1603D}
-.primo-impact-text{color:#1B2A41}
-.primo-impact-text b{color:#C1603D}
-.primo-accordion-icon{background:#FBF3E7}
-.primo-accordion-item:hover .primo-accordion-icon,.primo-accordion-item.primo-open .primo-accordion-icon{background:rgba(193,96,61,.12);box-shadow:0 0 0 2px rgba(193,96,61,.18) inset}
-.primo-accordion-title{color:#1B2A41}
-.primo-accordion-sub{color:#7A6E58}
-.primo-accordion-chevron{color:#7A6E58}
-.primo-accordion-item.primo-open .primo-accordion-chevron{color:#C1603D}
-.primo-accordion-link{border-color:#E7D9C2}
-.primo-accordion-link:hover{border-color:#E3B48C}
-.primo-accordion-link-icon{background:#FBF3E7}
-.primo-accordion-link:hover .primo-accordion-link-icon{background:rgba(193,96,61,.14)}
-.primo-accordion-link-label{color:#1B2A41}
-#primo-value{background:#FBF3E7}
-.primo-value-icon-circle{background:linear-gradient(135deg,#C1603D,#B8912F)}
-.primo-value-item h3{font-family:'Fraunces',serif;color:#1B2A41}
-.primo-value-item p{color:#7A6E58}
-.primo-guides-subtitle{font-family:'Fraunces',serif;color:#1B2A41}
-.primo-guide-card{background:#FBF3E7;border-color:#E7D9C2}
-.primo-guide-card:hover{border-color:#E3B48C}
-.primo-guide-title{color:#1B2A41}
-.primo-guide-excerpt{color:#7A6E58}
-.primo-guide-link{color:#C1603D}
-.primo-guide-link:hover{color:#A24E2D}
-#primo-back-bar{background:#FBF3E7}
-.primo-back-link{color:#7A6E58}
-.primo-back-link:hover{color:#1B2A41}
-#primo-testimonials{background:#FBF3E7;border-top-color:#E7D9C2}
-#primo-testimonials .primo-test-title{font-family:'Fraunces',serif;color:#1B2A41}
-.primo-test-card{border-color:#E7D9C2}
-.primo-test-name{color:#1B2A41}
-.primo-test-quote{color:#7A6E58}
-#primo-leadmagnet{background:#142440}
-.primo-lm-title{font-family:'Fraunces',serif}
-.primo-lm-form button{background:#C1603D}
-.primo-lm-form button:hover{background:#A24E2D}
-#primo-legalbar{background:#142440}
-#primo-country-toast{background:#142440}
-#primo-country-toast button.primo-toast-country:hover{background:#C1603D}
-.primo-detail-inner{border-top-color:var(--sello,#C1603D)}
-.primo-detail-close{color:#1B2A41}
-.primo-detail-close:hover{background:var(--sello,#C1603D)}
-.primo-detail-col li::before{color:#A99C82}
-#primo-loading-overlay{background:#FBF3E7}
-.primo-spinner{border-color:rgba(193,96,61,.18);border-top-color:#C1603D}
-.primo-loading-text{color:#1B2A41}
+.gh-head::after,header.gh-head::after,header.site-header::after{background-color:#FBF3E7 !important}
+.primo-trust-badge{border-left-color:#E7D9C2 !important}
+.ptb-number{background:linear-gradient(135deg,#C1603D,#B8912F) !important;-webkit-background-clip:text !important;background-clip:text !important;-webkit-text-fill-color:transparent !important}
+.ptb-text span{color:#7A6E58 !important}
+.ptb-text .ptb-highlight{color:#1B2A41 !important}
+#primo-hero{background:radial-gradient(120% 160% at 15% 0%,#142440 0%,#0E1B30 60%,#0B1B2E 100%) !important}
+#primo-hero::after{background:radial-gradient(38% 55% at 20% 15%,rgba(193,96,61,.24) 0%,rgba(193,96,61,0) 70%),radial-gradient(45% 60% at 85% 90%,rgba(184,145,47,.16) 0%,rgba(184,145,47,0) 70%) !important}
+#primo-hero h1{font-family:'Fraunces',serif !important;font-weight:700 !important}
+#primo-hero h1 em{color:#C1603D !important;font-style:italic !important}
+#primo-main-interface{background:#FBF3E7 !important}
+.primo-mi-timeline::before{background:repeating-linear-gradient(180deg,#E7D9C2 0 8px,transparent 8px 16px) !important}
+.primo-mi-number{background:#1B2A41 !important;font-family:'Fraunces',serif !important}
+.primo-mi-label{color:#1B2A41 !important}
+.primo-mi-hint{border-color:#E7D9C2 !important;color:#7A6E58 !important}
+.primo-mission-block h3{font-family:'Fraunces',serif !important;color:#1B2A41 !important}
+.primo-mission-block p{color:#7A6E58 !important}
+.primo-country-card{border-color:#E7D9C2 !important}
+.primo-country-card .primo-country-card-text{color:#1B2A41 !important;font-family:'Fraunces',serif !important}
+.primo-country-card:hover{border-color:#E3B48C !important}
+.primo-country-card.primo-active{border-color:#C1603D !important;background:rgba(193,96,61,.07) !important;box-shadow:0 10px 26px rgba(193,96,61,.16) !important}
+#primo-impact{background:#FBF3E7 !important}
+.primo-impact-inner{border-color:#E7D9C2 !important}
+.primo-impact-icon{background:rgba(193,96,61,.12) !important;color:#C1603D !important}
+.primo-impact-text{color:#1B2A41 !important}
+.primo-impact-text b{color:#C1603D !important}
+.primo-accordion-icon{background:#FBF3E7 !important}
+.primo-accordion-item:hover .primo-accordion-icon,.primo-accordion-item.primo-open .primo-accordion-icon{background:rgba(193,96,61,.12) !important;box-shadow:0 0 0 2px rgba(193,96,61,.18) inset !important}
+.primo-accordion-title{color:#1B2A41 !important}
+.primo-accordion-sub{color:#7A6E58 !important}
+.primo-accordion-chevron{color:#7A6E58 !important}
+.primo-accordion-item.primo-open .primo-accordion-chevron{color:#C1603D !important}
+.primo-accordion-link{border-color:#E7D9C2 !important}
+.primo-accordion-link:hover{border-color:#E3B48C !important}
+.primo-accordion-link-icon{background:#FBF3E7 !important}
+.primo-accordion-link:hover .primo-accordion-link-icon{background:rgba(193,96,61,.14) !important}
+.primo-accordion-link-label{color:#1B2A41 !important}
+#primo-value{background:#FBF3E7 !important}
+.primo-value-icon-circle{background:linear-gradient(135deg,#C1603D,#B8912F) !important}
+.primo-value-item h3{font-family:'Fraunces',serif !important;color:#1B2A41 !important}
+.primo-value-item p{color:#7A6E58 !important}
+.primo-guides-subtitle{font-family:'Fraunces',serif !important;color:#1B2A41 !important}
+.primo-guide-card{background:#FBF3E7 !important;border-color:#E7D9C2 !important}
+.primo-guide-card:hover{border-color:#E3B48C !important}
+.primo-guide-title{color:#1B2A41 !important}
+.primo-guide-excerpt{color:#7A6E58 !important}
+.primo-guide-link{color:#C1603D !important}
+.primo-guide-link:hover{color:#A24E2D !important}
+#primo-back-bar{background:#FBF3E7 !important}
+.primo-back-link{color:#7A6E58 !important}
+.primo-back-link:hover{color:#1B2A41 !important}
+#primo-testimonials{background:#FBF3E7 !important;border-top-color:#E7D9C2 !important}
+#primo-testimonials .primo-test-title{font-family:'Fraunces',serif !important;color:#1B2A41 !important}
+.primo-test-card{border-color:#E7D9C2 !important}
+.primo-test-name{color:#1B2A41 !important}
+.primo-test-quote{color:#7A6E58 !important}
+#primo-leadmagnet{background:#142440 !important}
+.primo-lm-title{font-family:'Fraunces',serif !important}
+.primo-lm-form button{background:#C1603D !important}
+.primo-lm-form button:hover{background:#A24E2D !important}
+#primo-legalbar{background:#142440 !important}
+#primo-country-toast{background:#142440 !important}
+#primo-country-toast button.primo-toast-country:hover{background:#C1603D !important}
+.primo-detail-inner{border-top-color:var(--sello,#C1603D) !important}
+.primo-detail-close{color:#1B2A41 !important}
+.primo-detail-close:hover{background:var(--sello,#C1603D) !important}
+.primo-detail-col li::before{color:#A99C82 !important}
+#primo-loading-overlay{background:#FBF3E7 !important}
+.primo-spinner{border-color:rgba(193,96,61,.18) !important;border-top-color:#C1603D !important}
+.primo-loading-text{color:#1B2A41 !important}
