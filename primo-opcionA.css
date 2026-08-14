@@ -69,3 +69,112 @@
 #primo-loading-overlay{background:#FBF3E7 !important}
 .primo-spinner{border-color:rgba(193,96,61,.18) !important;border-top-color:#C1603D !important}
 .primo-loading-text{color:#1B2A41 !important}
+
+/* ============================================================
+   NUEVO — #primo-trust-route (reemplaza #primo-impact + #primo-value)
+   ============================================================ */
+#primo-trust-route{background:#FBF3E7 !important;padding:40px 20px 52px !important}
+
+.ptr-inner{max-width:1080px !important;margin:0 auto !important}
+
+.ptr-eyebrow{display:block !important;text-align:center !important;font-family:'IBM Plex Mono',monospace !important;font-size:11.5px !important;letter-spacing:.14em !important;text-transform:uppercase !important;color:#C1603D !important;margin:0 0 20px !important}
+
+.ptr-pill{display:flex !important;align-items:center !important;gap:14px !important;justify-content:center !important;background:#fff !important;border:1px solid #E7D9C2 !important;border-radius:999px !important;padding:12px 24px !important;max-width:480px !important;margin:0 auto 40px !important;box-shadow:0 6px 20px rgba(20,36,64,.06) !important}
+
+.ptr-avatars{display:flex !important;flex:0 0 auto !important}
+
+.ptr-avatars span{width:26px !important;height:26px !important;border-radius:50% !important;border:2px solid #fff !important;margin-left:-9px !important;display:inline-block !important}
+
+.ptr-avatars span:first-child{margin-left:0 !important}
+
+.ptr-avatars span:nth-child(1){background:#C1603D !important}
+
+.ptr-avatars span:nth-child(2){background:#B8912F !important}
+
+.ptr-avatars span:nth-child(3){background:#1F3B3B !important}
+
+.ptr-count{font-family:'Fraunces',serif !important;font-weight:700 !important;font-size:20px !important;color:#1B2A41 !important;flex:0 0 auto !important}
+
+.ptr-pilltext{font-family:'IBM Plex Sans',sans-serif !important;font-size:12.5px !important;color:#7A6E58 !important;line-height:1.3 !important;max-width:200px !important}
+
+.ptr-grid{position:relative !important;display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:20px !important}
+
+.ptr-grid::before{content:"" !important;position:absolute !important;top:50% !important;left:8% !important;right:8% !important;height:0 !important;border-top:2px dashed rgba(184,145,47,.35) !important;transform:translateY(-54px) !important;z-index:0 !important}
+
+.ptr-card{position:relative !important;z-index:1 !important;background:#fff !important;border-radius:16px !important;border:1px solid #E7D9C2 !important;padding:24px 20px 22px !important;overflow:hidden !important;transition:transform .2s ease,box-shadow .2s ease !important}
+
+.ptr-card::after{content:"" !important;position:absolute !important;left:0 !important;right:0 !important;bottom:0 !important;height:0 !important;background:#C1603D !important;transition:height .2s ease !important}
+
+.ptr-card:hover{transform:translateY(-4px) !important;box-shadow:0 18px 36px rgba(20,36,64,.12) !important}
+
+.ptr-card:hover::after{height:4px !important}
+
+.ptr-num{position:absolute !important;top:8px !important;right:14px !important;font-family:'Fraunces',serif !important;font-weight:600 !important;font-size:30px !important;color:#E7D9C2 !important;z-index:0 !important}
+
+.ptr-icon{width:44px !important;height:44px !important;border-radius:50% !important;background:linear-gradient(135deg,#C1603D,#B8912F) !important;display:flex !important;align-items:center !important;justify-content:center !important;margin-bottom:14px !important;position:relative !important;z-index:1 !important;transition:transform .2s ease !important}
+
+.ptr-card:hover .ptr-icon{transform:scale(1.06) rotate(-4deg) !important}
+
+.ptr-icon svg{width:19px !important;height:19px !important;stroke:#fff !important;fill:none !important;stroke-width:1.8 !important}
+
+.ptr-title{font-family:'Fraunces',serif !important;font-size:16px !important;margin:0 0 6px !important;color:#1B2A41 !important;position:relative !important;z-index:1 !important}
+
+.ptr-text{font-family:'IBM Plex Sans',sans-serif !important;font-size:13px !important;line-height:1.5 !important;color:#7A6E58 !important;margin:0 !important;position:relative !important;z-index:1 !important}
+
+
+/* ============================================================
+   NUEVO — Plan de supervivencia (contenido nuevo dentro de #primo-guides)
+   ============================================================ */
+#primo-guides{background:#fff !important}
+
+.psv-inner{max-width:1080px !important;margin:0 auto !important}
+
+.psv-intro{text-align:center !important;font-family:'Fraunces',serif !important;font-size:18px !important;color:#1B2A41 !important;margin:0 0 34px !important}
+
+.psv-block{margin-bottom:34px !important}
+
+.psv-block:last-child{margin-bottom:0 !important}
+
+.psv-blocktitle{font-family:'Fraunces',serif !important;font-size:16px !important;font-weight:600 !important;margin:0 0 16px !important;display:flex !important;align-items:center !important;gap:8px !important}
+
+.psv-es .psv-blocktitle{color:#C1603D !important}
+
+.psv-de .psv-blocktitle{color:#1F3B3B !important}
+
+.psv-grid{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:16px !important}
+
+.psv-step{position:relative !important;overflow:hidden !important;border-radius:14px !important;padding:20px 18px 18px !important;background:#FBF3E7 !important;border:1px solid #E7D9C2 !important}
+
+.psv-de .psv-step{background:#F1F5F4 !important;border-color:#D6E2DF !important}
+
+.psv-bgnum{position:absolute !important;top:-8px !important;right:6px !important;font-family:'Fraunces',serif !important;font-weight:700 !important;font-size:58px !important;line-height:1 !important;color:rgba(193,96,61,.10) !important;z-index:0 !important}
+
+.psv-de .psv-bgnum{color:rgba(31,59,59,.10) !important}
+
+.psv-tag{display:inline-block !important;font-family:'IBM Plex Mono',monospace !important;font-size:10px !important;letter-spacing:.06em !important;font-weight:600 !important;padding:4px 9px !important;border-radius:5px !important;margin-bottom:12px !important;position:relative !important;z-index:1 !important;background:rgba(193,96,61,.12) !important;color:#C1603D !important}
+
+.psv-de .psv-tag{background:rgba(31,59,59,.10) !important;color:#1F3B3B !important}
+
+.psv-de .psv-tag.psv-tag-gold{background:rgba(184,145,47,.14) !important;color:#8A6B1F !important}
+
+.psv-title{font-family:'IBM Plex Sans',sans-serif !important;font-weight:700 !important;font-size:14.5px !important;margin:0 0 8px !important;position:relative !important;z-index:1 !important;color:#1B2A41 !important}
+
+.psv-text{font-family:'IBM Plex Sans',sans-serif !important;font-size:12.5px !important;line-height:1.5 !important;color:#7A6E58 !important;margin:0 0 14px !important;position:relative !important;z-index:1 !important}
+
+.psv-cta{font-family:'IBM Plex Sans',sans-serif !important;font-weight:700 !important;font-size:12.5px !important;text-decoration:none !important;position:relative !important;z-index:1 !important;display:inline-block !important;padding:4px 0 !important}
+
+.psv-es .psv-cta{color:#C1603D !important}
+
+.psv-de .psv-cta{color:#1F3B3B !important}
+
+/* Diseño adaptable: móvil primero sin depender de hover. */
+@media (max-width:860px){
+  .psv-grid{grid-template-columns:repeat(2,1fr) !important}
+}
+@media (max-width:780px){
+  .ptr-grid{grid-template-columns:1fr !important;gap:14px !important}
+  .ptr-grid::before{display:none !important}
+}
+@media (max-width:560px){
+  .psv-grid{grid-template-columns:1fr !important}
+}
