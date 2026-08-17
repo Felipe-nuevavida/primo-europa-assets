@@ -158,7 +158,7 @@
     if (!record) { console.warn(LOG, 'Ficha no encontrada:', { route:route, brand:brand }); return; }
 
     const mainButton = card.querySelector('.card-action .btn');
-    if (mainButton) { mainButton.href = record.url; mainButton.target = '_blank'; mainButton.rel = 'noopener noreferrer'; }
+    if (mainButton) { mainButton.href = record.url; mainButton.target = '_blank'; mainButton.rel = 'sponsored noopener noreferrer'; }
     const trigger = card.querySelector('.tarifa-link');
     if (!trigger) return;
 
